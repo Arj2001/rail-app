@@ -16,7 +16,8 @@ const addRoute:Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ViewRailwayComponent
+    ViewRailwayComponent,
+  
   ],
   imports: [
     BrowserModule,
