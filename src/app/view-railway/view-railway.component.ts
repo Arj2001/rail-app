@@ -10,6 +10,9 @@ export class ViewRailwayComponent implements OnInit {
   constructor() { }
 
   name="Arjun"
+  changeName=()=>{
+    this.name = "Raju"
+  }
 
   ngOnInit(): void {
   }
