@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ViewRailwayComponent } from './view-railway/view-railway.component';
 import { ViewNewRailwayComponent } from './view-new-railway/view-new-railway.component';
+import { HttpClientModule } from "@angular/common/http";
 
 const addRoute:Routes = [
   {
@@ -25,7 +26,8 @@ const addRoute:Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(addRoute),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,33 @@
-<p>Hi! My name is {{name1}}. Whats your Name?</p>
+<!-- <p>Hi! My name is {{name1}}. Whats your Name?</p>
 <p>Hi {{name1}}. My name is {{name2}}</p>
 <input type="text" name="name1" value="{{name1}}" [(ngModel)] = "name1">
 <input type="text" name="name2" value="{{name2}}" [(ngModel)] = "name2">
-<button class="btn btn-success" (click)="changeValue()" [disabled]="status">Change</button>
+<button class="btn btn-success" (click)="changeValue()" [disabled]="status">Change</button> -->
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Serial No</th>
+                    <th scope="col">Station Code</th>
+                    <th scope="col">Station Name</th>
+                    <th scope="col">Arrival Time</th>
+                    <th scope="col">Deprature Time</th>
+                    <th scope="col">Distance (Km)</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr *ngFor="let i of railData.Route">
+                    <td>{{i.SerialNo}}</td>
+                    <td>{{i.StationCode}}</td>
+                    <td>{{i.StationName}}</td>
+                    <td>{{i.ArrivalTime}}</td>
+                    <td>{{i.DepartureTime}}</td>
+                    <td>{{i.Distance}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

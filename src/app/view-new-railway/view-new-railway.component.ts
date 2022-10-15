@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-view-new-railway',
@@ -7,11 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewNewRailwayComponent implements OnInit {
 
-  constructor() { }
+  constructor(private myApi:ApiService) {
+    this.putRailData()
+   }
 
   name1 = "Renji"
   name2 = "Sona"
   status = false
+
+  railData:any
+
+  putRailData=()=>{
+    this.myApi.getRailData().subscribe(
+      (data)=>{
+        this.railData = data
+      }
+    )
+  }
 
   changeValue=()=>{
     this.name1 = "Babu"
