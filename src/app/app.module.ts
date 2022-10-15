@@ -6,10 +6,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ViewRailwayComponent } from './view-railway/view-railway.component';
+import { ViewNewRailwayComponent } from './view-new-railway/view-new-railway.component';
 
 const addRoute:Routes = [
   {
-    path:"",component:ViewRailwayComponent
+    path:"",component:ViewNewRailwayComponent
   }
 ]
 
@@ -17,6 +18,7 @@ const addRoute:Routes = [
   declarations: [
     AppComponent,
     ViewRailwayComponent,
+    ViewNewRailwayComponent,
   
   ],
   imports: [
