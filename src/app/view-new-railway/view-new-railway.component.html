@@ -1,0 +1,5 @@
+<p>Hi! My name is {{name1}}. Whats your Name?</p>
+<p>Hi {{name1}}. My name is {{name2}}</p>
+<input type="text" name="name1" value="{{name1}}" [(ngModel)] = "name1">
+<input type="text" name="name2" value="{{name2}}" [(ngModel)] = "name2">
+<button class="btn btn-success" (click)="changeValue()" [disabled]="status">Change</button>
